@@ -24,13 +24,11 @@ class UploadController extends Controller
             activity()->event('File Uploaded')->log('File Uploaded and proceeded successfully');
 
             return back()->with('success','File Uploaded and proceed to importing..');
-            return response()->json(['status' => true,'message' => 'File Uploaded and proceed to importing..'],200);
 
         } catch (\Exception $e) {
             activity()->event('Error')->log('Failed to upload: '. $e->getMessage());
 
             return back()->with('danger', $e->getMessage());
-            return response()->json(['status' => false, 'message' => 'Failed to upload. Please check file type and content'],200);
         }
     }
 
