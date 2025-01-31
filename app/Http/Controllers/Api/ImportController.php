@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UploadRequest;
 use App\Jobs\ProcessMobileNumbers;
 use App\Traits\UploadFile;
-use Illuminate\Http\Request;
 
 class ImportController extends Controller
 {
